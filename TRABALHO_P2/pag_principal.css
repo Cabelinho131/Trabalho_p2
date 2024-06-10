@@ -1,5 +1,123 @@
 #atletas-botafogo{
 
-    background-color:#747474
-    color(srgb #f5ecec)
+background-color: #3b2020;
+color: white;
+position: relative;
+top: 0px;
+height: 50px;
+font-family: sans-serif
+
 }
+
+.container {
+    position: relative;
+    top: -60px;
+    text-align:end;
+    padding: 4px;
+    font-family:sans-serif
+}
+button {
+    padding: 10px ;
+    background-color: #000000;
+    color: white;
+    font-family: Arial
+}
+
+#MButton{
+    cursor: pointer;
+    padding: 25px ;
+    background-color: #000000;
+    color: white;
+    width: 115px;
+    text-align: center;
+    position:relative;
+    top: -16px;
+    left: 428px;
+    font-family:Impact
+   
+}
+#EButton{
+    cursor: pointer;
+    padding: 20px ;
+    background-color: #050505;
+    color: white;
+    width: 114px;
+    text-align: center;
+    position:relative;
+    top: -20px;
+    left: 600px;
+    height: 70px
+   
+}
+#ElasButton{
+    cursor: pointer;
+    padding: 5px ;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    width: 112px;
+    text-align: center;
+    position:relative;
+    top: -16px;
+    left: 340px;
+    height: 70px
+    
+    
+}
+#ElasButton{
+    font-family:"sofia"
+   
+}
+
+
+
+#Buscar{
+    position:relative;
+    margin-left: 100px;
+    top: 75px;
+    width: 400px;
+    height: 45px
+}
+#EButton{
+    font-family:Georgia
+}
+#p {
+    display: none;
+}
+
+
+#elencos{
+    display: grid;
+   
+}
+
+
+
+
+#lista-Elencos h3 {
+    width: 100%;
+    font-family: Impact;
+    color: #000000;
+}
+
+#lista-Elencos img {
+    max-width: 90%;
+    max-height: 90%;
+   
+   
+}
+
+
+
+#lista-Elencos li{
+    top: 355px;
+ display: flex;
+padding: 5px;
+border: 0px solid #fffd82;
+margin-right: -10px;
+background-color: #fffd82;
+width: 230px;
+font-family: Impact;
+color: #000000;
+
+}
+

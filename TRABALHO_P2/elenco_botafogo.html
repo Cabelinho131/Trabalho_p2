@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina_Principal</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
     <link rel="import" href="https://botafogo-atletas.mange.li/2024-1/all">
-
+    <link rel="stylesheet" href="pag_principal.css">
+    
 </head>
 <body>
-   
+    
    <div id ="atletas-botafogo">
     <h1>Atletas Botafogo 2024-1</h1>
+   <div class="container">
+     <button onclick="SairPaginaElencos()">Sair</button>
+     <script src="trabalhop2.js"></script>
+    </div>
+
+    <button id="MButton" onclick="BuscarMasculino()">Masculino </button>
+    
 
 
-   </div> 
-
+    <button id="EButton"onclick="BuscarElencoCompleto()">Elenco<br>Completo</button>
 
     
+    <button id="ElasButton" onclick="BuscarFeminino()"> Feminino</button>
+
+
+     <input type="text" id="Buscar" placeholder="BUSQUE POR NOME">
+    
+    
+
+    <div id= elencos>
+
+        <div id="lista-Elencos">
+        </div>
+   
+    </div>
+    
+            
+            
 </body>
 </html>
