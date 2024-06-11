@@ -1,97 +1,106 @@
-#atletas-botafogo{
 
-background-color: #3b2020;
-color: white;
-position: relative;
-top: 0px;
-height: 50px;
-font-family: sans-serif
+#atletas-botafogo {
 
+    background-color: #3b2020;
+    color: white;
+    position: relative;
+    top: 0px;
+    height: 50px;
+    font-family: sans-serif
 }
 
 .container {
     position: relative;
     top: -60px;
-    text-align:end;
+    text-align: end;
     padding: 4px;
-    font-family:sans-serif
+    font-family: sans-serif
 }
+
 button {
-    padding: 10px ;
+    padding: 10px;
     background-color: #000000;
     color: white;
     font-family: Arial
 }
 
-#MButton{
+#MButton {
     cursor: pointer;
-    padding: 25px ;
+    padding: 25px;
     background-color: #000000;
     color: white;
     width: 115px;
     text-align: center;
-    position:relative;
+    position: relative;
     top: -16px;
     left: 428px;
-    font-family:Impact
-   
+    font-family: Impact
 }
-#EButton{
+
+#EButton {
     cursor: pointer;
-    padding: 20px ;
+    padding: 20px;
     background-color: #050505;
     color: white;
     width: 114px;
     text-align: center;
-    position:relative;
-    top: -20px;
+    position: relative;
+
     left: 600px;
     height: 70px
-   
 }
-#ElasButton{
+
+#ElasButton {
+     
     cursor: pointer;
-    padding: 5px ;
+    padding: 5px;
     background-color: rgb(5, 5, 5);
     color: white;
     width: 112px;
     text-align: center;
-    position:relative;
-    top: -16px;
+    position: relative;
+    top: -55px;
     left: 340px;
-    height: 70px
-    
-    
-}
-#ElasButton{
-    font-family:"sofia"
+    height: 60px
    
 }
 
+#ElasButton {
+    font-family: "sofia"
+   
+
+}
 
 
-#Buscar{
-    position:relative;
+
+#Buscar {
+    position: relative;
     margin-left: 100px;
     top: 75px;
     width: 400px;
     height: 45px
 }
-#EButton{
-    font-family:Georgia
+
+#EButton {
+    top: 30px;
+    font-family: Georgia
 }
+
 #p {
     display: none;
 }
 
 
-#elencos{
+#lista-Elencos {
     display: grid;
-   
+    grid-template-columns: auto auto auto auto; 
+    gap: 10px;
+    margin-top: 100px;
+    margin-left: -400px;
+    top: 255px;
+    margin-right: -10px;
+
 }
-
-
-
 
 #lista-Elencos h3 {
     width: 100%;
@@ -102,22 +111,62 @@ button {
 #lista-Elencos img {
     max-width: 90%;
     max-height: 90%;
-   
-   
+
+}
+
+
+#lista-Elencos li {
+    display: flex;
+    padding: 5px;
+    border: 0px solid #fffd82;
+    margin-right: -10px;
+    background-color: #fffd82;
+    width: 230px;
+    font-family: Impact;
+    color: #000000;
+
+
+}
+
+@media screen and (max-width: 768px) {
+    #lista-Elencos {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #lista-Elencos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    #lista-Elencos {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 
 
-#lista-Elencos li{
-    top: 355px;
- display: flex;
-padding: 5px;
-border: 0px solid #fffd82;
-margin-right: -10px;
-background-color: #fffd82;
-width: 230px;
-font-family: Impact;
-color: #000000;
 
+#EButton {
+    top: -55px;
+    height: 60px;
 }
 
+#MButton {
+    top: -50px;
+    height: 60px;
+}
+
+#Buscar {
+    top: 15px;
+    height: 30px;
+}

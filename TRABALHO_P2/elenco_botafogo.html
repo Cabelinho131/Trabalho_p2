@@ -13,9 +13,10 @@
     
    <div id ="atletas-botafogo">
     <h1>Atletas Botafogo 2024-1</h1>
+    
    <div class="container">
      <button onclick="SairPaginaElencos()">Sair</button>
-     <script src="trabalhop2.js"></script>
+     
     </div>
 
     <button id="MButton" onclick="BuscarMasculino()">Masculino </button>
@@ -28,18 +29,19 @@
     <button id="ElasButton" onclick="BuscarFeminino()"> Feminino</button>
 
 
-     <input type="text" id="Buscar" placeholder="BUSQUE POR NOME">
-    
+     <input type="text" id="Buscar" placeholder="BUSQUE POR NOME"oninput="filtrarElencos()">
     
 
-    <div id= elencos>
+     
+     <ul id= elencos>
 
-        <div id="lista-Elencos">
+        <li id="lista-Elencos">
+            
         </div>
    
     </div>
-    
-            
-            
+
+  
+<script src="trabalhop2.js"></script>
 </body>
 </html>
