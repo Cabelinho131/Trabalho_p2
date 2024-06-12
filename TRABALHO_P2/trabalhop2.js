@@ -81,13 +81,22 @@ function mostrarElencos(elencos) {
     listaElencos.innerHTML = '';
 
     elencos.forEach(jogador => {
+ 
         const itemElenco = document.createElement('li');
+       
         itemElenco.innerHTML = `
-            <a href="${jogador.url_detalhes}">
+        
+            <a href="${`detalhes.html?id=${jogador.id}`}">
                 <img src="${jogador.imagem}" alt="Imagem do jogador"  class="Imagens">
                 <h3>${jogador.nome}</h3>
+                
+               
             </a>
+           
         `;
+       
+
+
         listaElencos.appendChild(itemElenco);
     });
 }
@@ -155,3 +164,4 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(erroLogin);
     }
 });
+

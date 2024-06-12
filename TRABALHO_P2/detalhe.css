@@ -3,3 +3,17 @@
 #h1 {
   color: rgb(255, 255, 255);
 }
+
+
+#volti{
+    background-color: rgb(255, 255, 255);
+    font-family:initial;
+   
+    width: 100px;
+    height: 40px;
+   margin-left: 580px;
+   margin-top: 20px;
+}
+#volti{
+font-weight:bold
+}

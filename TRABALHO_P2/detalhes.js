@@ -1,16 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   if (localStorage.getItem("senha") === "UMASENHA") {
-    getJogador();
+      await getJogador();
   } else {
-    const erroLogin = document.createElement("h1");
-    erroLogin.innerHTML = "É preciso estar logado para exibir detalhes";
-    body.appendChild(erroLogin);
+      const erroLogin = document.createElement("h1");
+      erroLogin.innerHTML = "É preciso estar logado para exibir detalhes";
+      document.body.appendChild(erroLogin);
   }
 });
 
 const body = document.body;
 const params = new URLSearchParams(window.location.search);
-const id = parseInt(params.get("id"));
+const idParam = params.get("id");
+const id = idParam ? parseInt(idParam) : null;
 
 function criaErroDetalhe() {
   const erroAtleta = document.createElement("h1");
@@ -19,6 +20,7 @@ function criaErroDetalhe() {
 }
 
 function constroiAtleta(entrada) {
+  
   const container_detalhe = document.createElement("article");
   const container_atleta = document.createElement("div");
   const container_descricao = document.createElement("div");
@@ -32,9 +34,9 @@ function constroiAtleta(entrada) {
   posicao.innerHTML = entrada.posicao;
 
   const descricao = document.createElement("p");
-  descricao.innerHTML = entrada.descricao;
+  
   const nome_completo = document.createElement("p");
-  nome_completo.innerHTML = `Nome Completo: ${entrada.nome_completo}`;
+
   const altura = document.createElement("p");
   altura.innerHTML = `Altura: ${entrada.altura}`;
   const nascimento = document.createElement("p");
@@ -46,28 +48,41 @@ function constroiAtleta(entrada) {
 
   container_detalhe.appendChild(container_atleta);
 
-  container_descricao.appendChild(descricao);
+
   container_descricao.appendChild(nome_completo);
   container_descricao.appendChild(altura);
   container_descricao.appendChild(nascimento);
+
 
   container_detalhe.appendChild(container_descricao);
 
   body.appendChild(container_detalhe);
 }
 
-const pegaJson = async (caminho) => {
+async function pegaJson(caminho) {
   const resposta = await fetch(caminho);
   const dados = await resposta.json();
   return dados;
-};
+}
 
-const getJogador = async () => {
-  const url = "https://botafogo-atletas.mange.li/2024-1/all";
-  const jogador = await pegaJson(`${url}/${id}`);
-  if (jogador === `Não há atleta com o id ${id}.`) {
-    criaErroDetalhe();
-  } else {
-    constroiAtleta(jogador);
+async function getJogador() {
+  if (!id) {
+      criaErroDetalhe();
+      return;
   }
-};
+  const url = `https://botafogo-atletas.mange.li/2024-1/${id}`;
+  try {
+      const jogador = await pegaJson(url);
+      if (jogador.message === `Não há atleta com o id ${id}.`) {
+          criaErroDetalhe();
+      } else {
+          constroiAtleta(jogador);
+      }
+  } catch (error) {
+      criaErroDetalhe();
+  }
+}
+
+function SairPaginaDetalhes() {
+  window.location.href = "elenco_botafogo.html";
+}
