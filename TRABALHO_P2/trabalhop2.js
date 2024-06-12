@@ -67,50 +67,32 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     };
 
-var loginButton = document.getElementById('mybutton');
-var minhaSenha = document.getElementById("Minhasenha")
-var senhaCorretaHash = 'UMASENHA';
+    
+        var loginButton = document.getElementById('mybutton');
+        var minhaSenha = document.getElementById("Minhasenha");
 
-loginButton.addEventListener('click', logar);
-minhaSenha.addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        logar();
+           minhaSenha.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') { // Verifica se a tecla pressionada é "Enter"
+            event.preventDefault(); // Impede o envio padrão do formulário
+            logar();
+            }
+        });
+ 
+    function logar() {
+      
+        var senhaInserida = document.getElementById('Minhasenha').value;
+
+        // Verifica se a senha inserida é igual à senha correta
+        if (senhaInserida === 'UMASENHA') {
+            // Redireciona para a página de elenco_botafogo.html se a senha estiver correta
+            window.location.href = "elenco_botafogo.html";
+        } else {
+            // Se a senha estiver incorreta, exibe uma mensagem de alerta
+            alert('Senha incorreta. Por favor, tente novamente.');
+        }
     }
-});
 
-function logar() {
-    console.log()
-    var password = minhaSenha.value;
-    console.log(password)
-    if (password === 'UMASENHA') {
-        window.location.href = "elenco_botafogo.html";
-    } else {
-        alert('Senha incorreta. Por favor, tente novamente.');
-    }
-}
-
-
-function compararSenha() {
-    const senhaDigitada = document.getElementById("Minhasenha").value;
-    const hashSenhaDigitada = sha256(senhaDigitada);
-
-    const hashPredefinido = 'f8b0d306cb8ee3fd94a8fe669bb8c202';
-
-    console.log('Senha digitada:', senhaDigitada);
-    console.log('Hash da senha digitada:', hashSenhaDigitada);
-    console.log('Hash predefinido:', hashPredefinido);
-
-
-    if (hashSenhaDigitada === hashPredefinido) {
-        console.log('Senha correta. Redirecionando...');
-        window.location.href = "elenco_botafogo.html";
-    } else {
-        alert('Senha incorreta. Por favor, tente novamente.');
-    }
-}
-
-
-
+    
 
 function SairPaginaElencos() {
     window.location.href = "index.html";
@@ -196,10 +178,6 @@ document.addEventListener('DOMContentLoaded', function () {
     BuscarMasculino();
 });
 
-document.getElementById("MButtton").addEventListener("click", BuscarMasculino);
-
-document.getElementById("ElasButton").addEventListener("click", BuscarFeminino);
-
 document.getElementById("EButton").addEventListener("click", function() {
     BuscarElencoCompleto().then(function(data) {
         filtrarElencos(data);
@@ -220,6 +198,3 @@ function filtrarElencos() {
         }
     });
 }
-
-
-

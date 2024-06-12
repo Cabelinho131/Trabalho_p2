@@ -55,10 +55,11 @@ p {
 #Introdução-page {
     text-align: center;
     width: 768px;
-    padding: 85px;
+    padding: 5px;
     position: relative;
-    top: -170px;
-    left: -125px;
+    top: -30px;
+    left: -105px;
+    background-color: #949494;
 }
 
 #login-page {
@@ -80,3 +81,13 @@ p {
         font-size: 14px;
     }
 }
+
+#but{
+    
+ background-color: #000000;
+ color: aliceblue;
+ font-family: sans-serif;
+   
+}
+
+

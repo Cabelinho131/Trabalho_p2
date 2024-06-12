@@ -13,10 +13,12 @@
 
 <body>
     <div id="login-page">
-        <input type="text" id="Minhasenha" placeholder="Informe a senha">
-        <button id="mybutton">Entrar </button>
+        <form onsubmit="logar(); return false;">
+            <input type="password" id="Minhasenha" placeholder="Informe a senha">
+            <button type="submit" id="but">Entrar</button>
+        </form>
         <p>Efetue login com a senha:UMASENHA</p>
-        <script src="trabalhop2.js"></script>
+        <script src="trabalhop2.js" defer></script>
     </div>
     <div id="Introdução-page">
         <h1>Atletas do Botafogo em 2024-1</h1>
@@ -32,7 +34,11 @@
 
     <script src="sha256-min.mjs"></script>
 
-
+<style>
+    body{
+        background-image: url(https://fimdejogo.com.br/wp-content/uploads/2020/01/estadio_botafogo_3.jpg);
+    }
+</style>
 </body>
 
 </html>
