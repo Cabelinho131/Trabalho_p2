@@ -54,11 +54,11 @@ p {
 
 #Introdução-page {
     text-align: center;
-    width: 768px;
-    padding: 5px;
+    width: 608px;
+    padding: -20px;
     position: relative;
     top: -30px;
-    left: -105px;
+    left: -5px;
     background-color: #949494;
 }
 
