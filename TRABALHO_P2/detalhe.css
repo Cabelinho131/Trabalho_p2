@@ -17,3 +17,48 @@
 #volti{
 font-weight:bold
 }
+
+
+#descri{
+    overflow-wrap: break-word;
+    max-width: 70%;
+    margin-top: -450px;
+    margin-left: 360px;
+}
+
+#natu{
+   margin-top: 450px
+   
+}
+
+#nasci{
+    
+    margin-top: 250px
+    
+}
+
+#nasci{
+    
+    margin-top: 20px
+    
+}
+
+
+#jogos{
+ 
+    margin-top: 250px
+}
+
+#altule{
+ 
+    margin-top: 200px
+}
+#altule{
+ 
+    margin-top: 20px
+}
+
+#jogos{
+ 
+    margin-top: 20px
+}

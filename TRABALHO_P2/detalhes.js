@@ -20,7 +20,6 @@ function criaErroDetalhe() {
 }
 
 function constroiAtleta(entrada) {
-  
   const container_detalhe = document.createElement("article");
   const container_atleta = document.createElement("div");
   const container_descricao = document.createElement("div");
@@ -34,13 +33,24 @@ function constroiAtleta(entrada) {
   posicao.innerHTML = entrada.posicao;
 
   const descricao = document.createElement("p");
-  
-  const nome_completo = document.createElement("p");
+  descricao.innerHTML = entrada.detalhes
+  descricao.id = "descri"
 
-  const altura = document.createElement("p");
-  altura.innerHTML = `Altura: ${entrada.altura}`;
+  const naturalidade = document.createElement("p");
+  naturalidade.innerHTML = `Naturalidade: ${entrada.naturalidade}`;
+  naturalidade.id = "natu"
+
   const nascimento = document.createElement("p");
   nascimento.innerHTML = `Nascimento: ${entrada.nascimento}`;
+  nascimento.id = "nasci"
+
+  const altura = document.createElement("p");
+  altura.innerHTML = `Altura: ${entrada.altura} m`;
+  altura.id = "altule"
+
+  const jogos = document.createElement("p");
+  jogos.innerHTML = `Número de Jogos: ${entrada.n_jogos}`;
+  jogos.id = "jogos"
 
   container_atleta.appendChild(imagem);
   container_atleta.appendChild(nome);
@@ -48,11 +58,11 @@ function constroiAtleta(entrada) {
 
   container_detalhe.appendChild(container_atleta);
 
-
-  container_descricao.appendChild(nome_completo);
-  container_descricao.appendChild(altura);
+  container_descricao.appendChild(descricao);
+  container_descricao.appendChild(naturalidade);
   container_descricao.appendChild(nascimento);
-
+  container_descricao.appendChild(altura);
+  container_descricao.appendChild(jogos);
 
   container_detalhe.appendChild(container_descricao);
 
