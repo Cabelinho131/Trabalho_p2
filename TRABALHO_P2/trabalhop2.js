@@ -54,12 +54,7 @@ function BuscarElencoCompleto() {
         });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var loginButton = document.getElementById('mybutton');
-    var minhaSenha = document.getElementById("Minhasenha");
 
-
-});
 
 function logar() {
     var senhaInserida = document.getElementById('Minhasenha').value;
@@ -81,9 +76,9 @@ function mostrarElencos(elencos) {
     listaElencos.innerHTML = '';
 
     elencos.forEach(jogador => {
- 
+
         const itemElenco = document.createElement('li');
-       
+
         itemElenco.innerHTML = `
         
             <a href="${`detalhes.html?id=${jogador.id}`}">
@@ -94,7 +89,7 @@ function mostrarElencos(elencos) {
             </a>
            
         `;
-       
+
 
 
         listaElencos.appendChild(itemElenco);

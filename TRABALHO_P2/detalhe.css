@@ -1,25 +1,26 @@
 @media screen and (max-width: 768px) {}
 
 #h1 {
-  color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 
-#volti{
+#volti {
     background-color: rgb(255, 255, 255);
-    font-family:initial;
-   
+    font-family: initial;
+
     width: 100px;
     height: 40px;
-   margin-left: 580px;
-   margin-top: 20px;
+    margin-left: 580px;
+    margin-top: 20px;
 }
-#volti{
-font-weight:bold
+
+#volti {
+    font-weight: bold
 }
 
 
-#descri{
+#descri {
     overflow-wrap: break-word;
     max-width: 70%;
     margin-top: -450px;
@@ -28,47 +29,44 @@ font-weight:bold
     font-weight: bolder;
 }
 
-#natu{
+#natu {
     font-family: system-ui;
     font-weight: bolder;
-    
-   margin-top: 450px
-   
-   
+
+    margin-top: 450px
 }
 
-#nasci{
-    
+#nasci {
+
     font-family: system-ui;
     font-weight: bolder;
     margin-top: 250px
-    
 }
 
-#nasci{
-  
+#nasci {
+
     margin-top: 20px
-    
 }
 
 
-#jogos{
+#jogos {
     font-family: system-ui;
     font-weight: bolder;
     margin-top: 250px
 }
 
-#altule{
+#altule {
     font-family: system-ui;
     font-weight: bolder;
     margin-top: 200px
 }
-#altule{
- 
+
+#altule {
+
     margin-top: 20px
 }
 
-#jogos{
- 
+#jogos {
+
     margin-top: 20px
 }

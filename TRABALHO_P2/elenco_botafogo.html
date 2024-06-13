@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,42 @@
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
     <link rel="import" href="https://botafogo-atletas.mange.li/2024-1/all">
     <link rel="stylesheet" href="pag_principal.css">
-    <script src="trabalhop2.js"defer></script>
+    <script src="trabalhop2.js" defer></script>
 </head>
+
 <body>
-    
-   <div id ="atletas-botafogo">
-    <h1>Atletas Botafogo 2024-1</h1>
-    
-   <div class="container">
-     <button onclick="SairPaginaElencos()">Sair</button>
-     
-    </div>
 
-    <button id="MButton" onclick="BuscarMasculino()">Masculino </button>
-    
+    <div id="atletas-botafogo">
+        <h1>Atletas Botafogo 2024-1</h1>
 
+        <div class="container">
+            <button onclick="SairPaginaElencos()">Sair</button>
 
-    <button id="EButton"onclick="BuscarElencoCompleto()">Elenco<br>Completo</button>
-
-    
-    <button id="ElasButton" onclick="BuscarFeminino()"> Feminino</button>
-
-
-     <input type="text" id="Buscar" placeholder="BUSQUE POR NOME"oninput="filtrarElencos()">
-    
-
-     
-     <ul id= elencos>
-
-        <li id="lista-Elencos">
-            
         </div>
-   
+
+        <button id="MButton" onclick="BuscarMasculino()">Masculino </button>
+
+
+
+        <button id="EButton" onclick="BuscarElencoCompleto()">Elenco<br>Completo</button>
+
+
+        <button id="ElasButton" onclick="BuscarFeminino()"> Feminino</button>
+
+
+        <input type="text" id="Buscar" placeholder="BUSQUE POR NOME" oninput="filtrarElencos()">
+
+
+
+        <ul id=elencos>
+
+            <li id="lista-Elencos">
+
     </div>
-  
+
+    </div>
+
 
 </body>
+
 </html>

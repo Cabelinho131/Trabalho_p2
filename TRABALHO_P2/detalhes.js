@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
   if (localStorage.getItem("senha") === "UMASENHA") {
-      await getJogador();
+    await getJogador();
   } else {
-      const erroLogin = document.createElement("h1");
-      erroLogin.innerHTML = "É preciso estar logado para exibir detalhes";
-      document.body.appendChild(erroLogin);
+    const erroLogin = document.createElement("h1");
+    erroLogin.innerHTML = "É preciso estar logado para exibir detalhes";
+    document.body.appendChild(erroLogin);
   }
 });
 
@@ -77,19 +77,19 @@ async function pegaJson(caminho) {
 
 async function getJogador() {
   if (!id) {
-      criaErroDetalhe();
-      return;
+    criaErroDetalhe();
+    return;
   }
   const url = `https://botafogo-atletas.mange.li/2024-1/${id}`;
   try {
-      const jogador = await pegaJson(url);
-      if (jogador.message === `Não há atleta com o id ${id}.`) {
-          criaErroDetalhe();
-      } else {
-          constroiAtleta(jogador);
-      }
-  } catch (error) {
+    const jogador = await pegaJson(url);
+    if (jogador.message === `Não há atleta com o id ${id}.`) {
       criaErroDetalhe();
+    } else {
+      constroiAtleta(jogador);
+    }
+  } catch (error) {
+    criaErroDetalhe();
   }
 }
 
