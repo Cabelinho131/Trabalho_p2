@@ -24,33 +24,43 @@ font-weight:bold
     max-width: 70%;
     margin-top: -450px;
     margin-left: 360px;
+    font-family: system-ui;
+    font-weight: bolder;
 }
 
 #natu{
+    font-family: system-ui;
+    font-weight: bolder;
+    
    margin-top: 450px
+   
    
 }
 
 #nasci{
     
+    font-family: system-ui;
+    font-weight: bolder;
     margin-top: 250px
     
 }
 
 #nasci{
-    
+  
     margin-top: 20px
     
 }
 
 
 #jogos{
- 
+    font-family: system-ui;
+    font-weight: bolder;
     margin-top: 250px
 }
 
 #altule{
- 
+    font-family: system-ui;
+    font-weight: bolder;
     margin-top: 200px
 }
 #altule{
