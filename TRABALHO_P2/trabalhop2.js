@@ -82,9 +82,10 @@ function mostrarElencos(elencos) {
         itemElenco.innerHTML = `
         
             <a href="${`detalhes.html?id=${jogador.id}`}">
+            <div class="saiba-mais">Saiba Mais</div>
                 <img src="${jogador.imagem}" alt="Imagem do jogador"  class="Imagens">
                 <h3>${jogador.nome}</h3>
-                
+        
                
             </a>
            

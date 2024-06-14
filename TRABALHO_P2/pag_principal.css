@@ -97,7 +97,25 @@ button {
     margin-left: -400px;
     top: 255px;
     margin-right: -10px;
+    max-width: 10px;
 
+}
+
+.saiba-mais {
+    display: inline-block;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    top: 300px;
+    left: 29%;
+    color: #000000;
+    font-style: oblique;
+    font-size: 30px
+}
+
+.saiba-mais:hover {
+    color: rgb(255, 0, 0);
 }
 
 
@@ -111,8 +129,8 @@ button {
     max-width: 90%;
     max-height: 90%;
 
-}
 
+}
 
 #lista-Elencos li {
     display: flex;
